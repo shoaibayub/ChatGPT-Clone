@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ChatBot</title>
+  <link rel="icon" type="image/png" href="../static/images/chatbot-removebg-preview.png">
+  <link rel="stylesheet" href="{{url_for('static',filename='icat-css/chatbot.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts Link For Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body>
+  <!-- Chats container -->
+  <div class="chat-container"></div>
+
+  <!-- Typing container -->
+  <div class="typing-container">
+    <div class="typing-content">
+      <div class="typing-textarea">
+        <textarea id="chat-input" spellcheck="false" placeholder="Enter a prompt here" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+      <div class="typing-controls">
+        <span id="mic-btn" class="material-symbols-rounded">mic</span>
+        <span id="active-language" class="material-buttons-rounded">en</span>
+        <span id="theme-btn" class="material-symbols-rounded">light_mode</span>
+        <span id="delete-btn" class="material-symbols-rounded">delete</span>
+
+      </div>
+    </div>
+    <script src="{{url_for('static',filename='icat-js/chatbot.js')}}" defer></script>
+</body>
+
+</html>
+
+<!-- micButton.addEventListener("click", () => {
+  recognition.lang = "en-US";
+
+  if (!isListening) {
+    recognition.start();
+    micButton.classList.add("listening");
+    isListening = true;
+  } else {
+    recognition.stop();
+    micButton.classList.remove("listening");
+    isListening = false;
+  }
+
+  recognition.onstart = function () {
+    // Speech recognition has started, add the 'listening' class
+    micButton.classList.add("listening");
+  };
+
+  recognition.onresult = function (event) {
+    const speechToText = event.results[0][0].transcript;
+    chatInput.value = speechToText;
+  };
+  recognition.onend = function () {
+    micButton.classList.remove("listening");
+    isListening = false;
+  };
+}); -->

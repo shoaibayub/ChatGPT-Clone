@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="icon" type="image/png" href="../static/images/chatbot-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='icat-css/style.css')}}">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form method="post" id="signup-form">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a> -->
+                    <a href="{{url_for('google_login')}}"><i>
+                            <img src="{{url_for('static',filename='images/btn_google_signin_dark_normal_web.png')}}"
+                                alt="">
+                        </i></a>
+                    <!-- <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name" name="name" id="name" />
+                <input type="email" placeholder="Email" name="email" id="email" />
+                <div id="email-error" class="email-message"></div>
+                <input type="password" placeholder="Password" name="password" id="password" />
+                <div id="password-error" class="password-message"></div>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form method="post" id="signin-form">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a> -->
+                    <a href="{{url_for('google_login')}}"><i>
+                            <img src="{{url_for('static',filename='images/btn_google_signin_dark_normal_web.png')}}"
+                                alt="">
+                        </i></a>
+                    <!-- <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
+                </div>
+                <span>or use your account</span>
+                <input type="email" placeholder="Email" name="emails" id="emails" />
+                <div id="emails-error" class="error-message"> </div>
+                <input type="password" placeholder="Password" name="passwords" id="paswords" />
+                <div id="passwords-error" class="error-message"></div>
+                <a href="#">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Greetings, Newcomer!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{url_for('static',filename='icat-js/script.js')}}"></script>
+
+</body>
+
+</html>

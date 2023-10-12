@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/images/chatbot-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="{{url_for('static',filename='icat-css/developer.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='icat-css/home.css')}}">
+
+    <title>Project Team</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <nav>
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">PAK GPT</label>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="/developers">Developer</a></li>
+                <li><a href="/chatbot">ChatBot</a></li>
+                {% if "user" not in session %}
+                <li><a href="/signin">Login</a></li>
+                {% else %}
+                <li><a href="/logout">Logout</a></li>
+                {% endif %}
+        </nav>
+    </div>
+    <div class="container">
+        <div class="icon">
+            <div class="imgBx active" style="--i:0.7;" data-id="content1">
+                <!-- <img src="../images/Nasar.jpg" alt=""> -->
+                <img src="{{ url_for('static', filename='images/Nasar.jpg') }}" alt="Nasar Ali">
+            </div>
+            <div class="imgBx" style="--i:2;" data-id="content2">
+                <!-- <img src="../images/Hassam.jpg" alt=""> -->
+                <img src="{{ url_for('static', filename='images/Hassam.jpg') }}" alt="Hassam">
+            </div>
+            <div class="imgBx" style="--i:3.34;" data-id="content3">
+                <!-- <img src="../images/zeeshan.jpg" alt=""> -->
+                <img src="{{ url_for('static', filename='images/zeeshan.jpg') }}" alt="M.Zeeshan">
+            </div>
+
+            <div class="imgBx" style="--i:4.46;" data-id="content5">
+                <!-- <img src="../images/shoaib.jpg" alt=""> -->
+                <img src="{{ url_for('static', filename='images/shoaib.jpg') }}" alt="Shoaib">
+            </div>
+            <div class="imgBx" style="--i:6;" data-id="content6">
+                <!-- <img src="../images/mohsin.jpg" alt=""> -->
+                <img src="{{ url_for('static', filename='images/mohsin.jpg') }}" alt="Mohsin">
+            </div>
+            <div class="imgBx" style="--i:7.55;" data-id="content7">
+                <!-- <img src="../images/Shamas.jpg" alt=""> -->
+                <img src="{{ url_for('static', filename='images/Shamas.jpg') }}" alt="Shamas">
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="contentBx active" id="content1">
+                <div class="card">
+                    <div class="imgBx">
+                        <!-- <img src="../images/Nasar.jpg" alt=""> -->
+                        <img src="{{ url_for('static', filename='images/Nasar.jpg') }}" alt="Nasar Ali">
+                    </div>
+                    <div class="textBx">
+                        <h2>Nasar<br><span>Backend-Developer</span></h2>
+                        <ul class="sci">
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentBx" id="content2">
+                <div class="card">
+                    <div class="imgBx">
+                        <!-- <img src="../images/hassam.jpg" alt=""> -->
+                        <img src="{{ url_for('static', filename='images/Hassam.jpg') }}" alt="Hassam">
+
+                    </div>
+                    <div class="textBx">
+                        <h2>Hassam Amer<br><span>Full-Stack Developer</span></h2>
+                        <ul class="sci">
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentBx" id="content3">
+                <div class="card">
+                    <div class="imgBx">
+                        <!-- <img src="../images/zeeshan.jpg" alt=""> -->
+                        <img src="{{ url_for('static', filename='images/zeeshan.jpg') }}" alt="Zeeshan">
+
+                    </div>
+                    <div class="textBx">
+                        <h2>M.Zeeshan<br><span>Front-end Developer</span></h2>
+                        <ul class="sci">
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="contentBx" id="content5">
+                <div class="card">
+                    <div class="imgBx">
+                        <!-- <img src="../images/shoaib.jpg" alt=""> -->
+                        <img src="{{ url_for('static', filename='images/shoaib.jpg') }}" alt="Shoaib">
+
+                    </div>
+                    <div class="textBx">
+                        <h2>Shoaib Ayub<br><span>Designer</span></h2>
+                        <ul class="sci">
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentBx" id="content6">
+                <div class="card">
+                    <div class="imgBx">
+                        <!-- <img src="../images/mohsin.jpg" alt=""> -->
+                        <img src="{{ url_for('static', filename='images/mohsin.jpg') }}" alt="Mohsin">
+
+                    </div>
+                    <div class="textBx">
+                        <h2>Raja Mohsin<br><span>Junior Developer</span></h2>
+                        <ul class="sci">
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentBx" id="content7">
+                <div class="card">
+                    <div class="imgBx">
+                        <!-- <img src="../images/Shamas.jpg" alt=""> -->
+                        <img src="{{ url_for('static', filename='images/Shamas.jpg') }}" alt="Shamas">
+
+                    </div>
+                    <div class="textBx">
+                        <h2>Shams-ul-Haq<br><span>Junior Developer</span></h2>
+                        <ul class="sci">
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+    <script>
+        let imgBx = document.querySelectorAll('.imgBx')
+        let contentBx = document.querySelectorAll('.contentBx')
+
+        for (let i = 0; i < imgBx.length; i++) {
+            imgBx[i].addEventListener('mouseover', function () {
+                for (let i = 0; i < contentBx.length; i++) {
+                    contentBx[i].className = 'contentBx';
+                }
+                document.getElementById(this.dataset.id).className = 'contentBx active';
+
+
+                for (let i = 0; i < imgBx.length; i++) {
+                    imgBx[i].className = 'imgBx';
+                }
+                this.className = 'imgBx active';
+            })
+        }
+    </script>
+</body>
+
+</html>

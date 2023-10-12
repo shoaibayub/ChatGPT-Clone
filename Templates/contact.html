@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="{{url_for('static',filename='icat-css/developer.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='icat-css/home.css')}}">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">PAK GPT</label>
+            <ul>
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/developers">Developer</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+                <li><button class="register-button " onclick="window.location.href='/signup'">Register Now</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>

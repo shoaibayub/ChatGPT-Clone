@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='icat-css/signup.css')}}">
+    <title>Signup and Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-toggle">
+                <button id="login-toggle" class="toggle-btn active">Login</button>
+                <button id="signup-toggle" class="toggle-btn">Signup</button>
+            </div>
+            <form id="login-form" class="form" action="/sigin" method="post">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username" name="username">
+                <input type="password" placeholder="Password" name="password">
+                <button class="submit-btn">Login</button>
+            </form>
+            <form id="signup-form" class="form" action="/signup" method="post">
+                <h2>Signup</h2>
+                <input type="text" placeholder="Username" name="username">
+                <input type="email" placeholder="Email" name="email">
+                <input type="password" placeholder="Password" name="password">
+                <button class="submit-btn">Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <script src="{{url_for('static',filename='icat-js/signup.js')}}"></script> -->
+</body>
+
+</html>
